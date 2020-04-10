@@ -3,3 +3,6 @@ https://ak-docker-images.s3.us-east-2.amazonaws.com/docker-images/python_lib.tar
 https://ak-docker-images.s3.us-east-2.amazonaws.com/docker-images/Dockerfile
 
 aws eks update-kubeconfig --kubeconfig ~/.kube/config-eks-dev-0122-cluster --region us-east-1 --name eks-dev-0122-cluster --profile tfsawssubprod-monitoring-admin-profile
+
+
+curl -u admin:password -T /var/lib/jenkins/workspace/GWPC/dist/wars/TomcatJndi/pc.war \"http://172.31.40.149:8081/artifactory/h2-repo-local/pc.war\
