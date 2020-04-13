@@ -6,3 +6,7 @@ aws eks update-kubeconfig --kubeconfig ~/.kube/config-eks-dev-0122-cluster --reg
 
 
 curl -u admin:password -T /var/lib/jenkins/workspace/GWPC/dist/wars/TomcatJndi/pc.war \"http://172.31.40.149:8081/artifactory/h2-repo-local/pc.war\
+
+https://www.kevinsimper.dk/posts/kubernetes-prometheus-docker-for-mac
+
+https://github.com/prometheus/prometheus/blob/master/documentation/examples/prometheus-kubernetes.yml 
