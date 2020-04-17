@@ -1,0 +1,20 @@
+1.	Login to jump server: ssh <lan_id>@awva-dclkn02152
+
+Use the ids as mentioned below:
+TFS account
+ALIE_adm 
+RIZWANP_adm
+ADILP_adm
+MAHAVIR_adm
+MUDITAA_adm
+AKSHAYR_adm
+
+
+2.	Provide the password, if you are aware. Otherwise, if it’s the first time access then provide the password in the format as mentioned in the document.
+3.	When first logging (ssh) in with the user run the following commands to create your kube.config file:
+aws eks update-kubeconfig --kubeconfig ~/.kube/config-k8s-dev-jenk-xeua --region us-east-1 --name eks-dev-0122-cluster
+export KUBECONFIG=~/.kube/config-k8s-dev-jenk-xeua
+echo "export KUBECONFIG=~/.kube/config-k8s-dev-jenk-xeua" >> ~/.bashrc
+
+To deploy or get or access the EKS cluster use kubectl commands:
+Eg: kubectl -n k8s-dev-jenk-xeua get pods
