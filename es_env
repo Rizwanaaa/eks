@@ -1,0 +1,56 @@
+DEV Environment : 
+
+Kubernetes developer node: awva-dclkn03224 (10.133.65.157)
+AD Group giving access to the server k8s-dev-jees91
+DEV ES EKS Cluster name: eks-dev-es-8eeb-cluster
+
+Devops namespaces: 
+
+k8s-dev-jees91-b8b4  for Jenkins ES DEV
+k8s-dev-sonaxy-rx8n for SonarQube DEV
+k8s-tst-jeet3o-8fd9  for Jenkins ES TEST
+k8s-tst-soteik-25ht for SonarQube TEST
+
+(DEV and TEST are on same cluster as discussed. If the environment increases significantly we will deploy a new test cluster)
+
+Authorization to these namespaces has been provided to the Kubernetes developer node. 
+
+STG Environment : 
+
+Kubernetes developer node: awva-aclkn03225 (10.133.57.4)
+AD Group giving access to the server k8s-stg-jees6s
+STG ES EKS Cluster name: eks-stg-es-e1a9-cluster
+
+Devops namespaces: 
+
+k8s-stg-jees6x-91a0 for Jenkins ES STG
+k8s-stg-sostqa-m8xq for SonarQube STG
+
+Authorization to these namespaces has been provided to the Kubernetes developer node. 
+
+PROD Environment : 
+
+Kubernetes developer node: awva-pclkn03226 (10.133.49.99)
+AD Group giving access to the server k8s-prd-jeep7c
+PROD ES EKS Cluster name: eks-prd-es-5c41-cluster
+
+Devops namespaces: 
+
+k8s-prd-jeep7c-8jnt for Jenkins ES PROD
+k8s-prd-soprku-n7ug for SonarQube PROD
+
+Authorization to these namespaces has been provided to the Kubernetes developer node. 
+
+
+Instructions to generate kubeconfig file: (run below commands for every user one time)
+aws eks update-config --name <ekscluster name> --region us-east-1 --kubeconfig=~/.kube/<eks cluster name>
+export KUBECONFIG=~/.kube/<eks cluster name>
+
+eg:
+
+aws eks update-config --name eks-dev-es-8eeb-cluster --region us-east-1 --kubeconfig=~/.kube/eks-dev-es-8eeb-cluster
+export KUBECONFIG=~/.kube/eks-dev-es-8eeb-cluster
+
+You should now be able to run kubectl commands against your namespaces: 
+kubectl get pods -n k8s-dev-jees91-b8b4  
+
