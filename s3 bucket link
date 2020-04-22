@@ -1,4 +1,4 @@
-
+aws s3 sync docker-images s3://ak-docker-images/docker-images
 https://ak-docker-images.s3.us-east-2.amazonaws.com/docker-images/python_lib.tar
 https://ak-docker-images.s3.us-east-2.amazonaws.com/docker-images/Dockerfile
 
