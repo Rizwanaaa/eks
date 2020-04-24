@@ -2,6 +2,8 @@ aws s3 sync docker-images s3://ak-docker-images/docker-images
 https://ak-docker-images.s3.us-east-2.amazonaws.com/docker-images/python_lib.tar
 https://ak-docker-images.s3.us-east-2.amazonaws.com/docker-images/Dockerfile
 https://ak-docker-images.s3.us-east-2.amazonaws.com/docker-images/influxdb.tar
+https://ak-docker-images.s3.us-east-2.amazonaws.com/docker-images/grafana.tar
+https://ak-docker-images.s3.us-east-2.amazonaws.com/docker-images/busybox.tar
 
 aws eks update-kubeconfig --kubeconfig ~/.kube/config-eks-dev-0122-cluster --region us-east-1 --name eks-dev-0122-cluster --profile tfsawssubprod-monitoring-admin-profile
 
