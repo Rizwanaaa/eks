@@ -19,3 +19,5 @@ https://github.com/prometheus/prometheus/blob/master/documentation/examples/prom
 https://github.tfs.toyota.com/RIZWANP/python-jenkins-metrics.git
 
 export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
+http://a75aeb6b82d4241ad8f50bfc7696bbbf-1542446114.eu-west-3.elb.amazonaws.com/
